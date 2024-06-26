@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <button>press me PLEASE</button>
+  <div id="greeting"></div>
+  <script>
+    function printName(name) {
+      if (true) {
+        var lastName = "Braswell";
+        console.log(name);
+      }
+      console.log(lastName)
+    }
+
+    printName("John");
+
+
+
+    function add7(num) {
+      return num + 7;
+    }
+
+    function multiply(num1, num2) {
+      return num1 * num2;
+    }
+
+    function capitalize(word) {
+      return word.substring(0,1).toUpperCase() + word.substring(1).toLowerCase()
+    }      
+
+    function lastLetter(word) {
+      return word.substring(word.length - 1)
+    }
+    console.log(add7(5));
+    console.log(multiply(3, 2));
+    console.log(capitalize("test"));
+    console.log(capitalize("TEST"));
+    console.log(capitalize("TeSt"));
+    console.log(lastLetter("abcd"))
+    
+
+    /*const obj = {
+      name: "John",
+      height: 5
+    };
+
+    console.log(obj["height"]);*/
+
+
+    function book(title, author, pages, haveRead) {
+      this.title = title;
+      this.author = author;
+      this.pages = pages;
+      this.haveRead = haveRead;
+      this.info = function() {
+        return this.title + " by " + this.author + ", " + this.pages + " pages";
+      }
+    }
+
+    const Hobbit = new book('The Hobbit', 'J.R.R. Tolkien', 295, true);
+    console.log(Hobbit.info())
+    function obj(name, height) {
+      this.name = name;
+      this.height = height;
+      this.sayName = function() {
+        console.log("Hey my name is " + this.name);
+      }
+    }
+
+    const John = new obj('John', 5);
+    console.log(John.sayName());
+  </script>
+</body>
+</html>
